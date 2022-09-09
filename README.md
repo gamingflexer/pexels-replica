@@ -2,6 +2,8 @@
 
 ## django commands
 
+```cd pexels```
+
 ```python manage.py runserver``` to run the server
 
 ```python manage.py makemigrations``` to make migrations
