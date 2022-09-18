@@ -6,7 +6,7 @@ from . import views
 from .views import homePage
   
 urlpatterns = [
-    path('home', views.homePage, name='home'),
+    path('', views.homePage, name='home'),
     path('login', views.login, name='login'),
     path('signup', views.signup, name='signup'),
     path('feedback', views.feedback, name='feedback'),
