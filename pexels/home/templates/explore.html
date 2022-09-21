@@ -4,8 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="static/css/explore.css" type="text/css">
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/3d4ecc8796.js" crossorigin="anonymous"></script>
+
+     <style>
+    .bg-nav {
+      background: #ad5389;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #3c1053, #ad5389);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #3c1053, #ad5389);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    }
+
+    .mt-100 {
+      margin-top: 100px;
+    }
+
+    .text-light display-4 mt-100 {
+      font-weight: 800;
+    }
+
+    .nav_logo {
+      width: 50px;
+      object-fit: contain;
+      border-radius: 50%;
+      
+
+    }
+    
+  </style>
 </head>
-<body>
+<body class="bg-nav">
+
+  <div
+    class="bg-nav text-light d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <img src="static/img/logo.jpeg" alt="" class="nav_logo">
+    <nav class="my-2 my-md-0 mr-md-3 text-light" style="float: right;">
+      
+      <a class="p-2 text-light" href="a" style="font-size:25px ;">Home</a>&nbsp;&nbsp;&nbsp;
+      <a class="p-2 text-light" href="" style="font-size:25px ;">Explore</a>&nbsp;&nbsp;&nbsp;
+      <a class="p-2 text-light" href="" style="font-size:25px ;">Contact Us</a>&nbsp;&nbsp;&nbsp;
+      <a class="p-2 text-light" href="" style="font-size:25px ;">About Us</a>&nbsp;&nbsp;&nbsp;
+    </nav>
+    <br>
+    <hr>
+
+  </div>
 
 <div class="container">
     <div class="gallery">
@@ -41,5 +88,42 @@
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="gallery">
+      <div class="gallery__item gallery__item--hor">
+        <img src="{{data.0}}" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="{{data.1}}" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="{{data.2}}" alt="">
+      </div>
+      <div class="gallery__item gallery__item--vert">
+        <img src="{{data.3}}" alt="">
+      </div>
+      <div class="gallery__item gallery__item--lg">
+        <img src="{{data.4}}" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="{{data.5}}" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="{{data.6}}" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="{{data.7}}" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="{{data.8}}" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="{{data.9}}" alt="">
+      </div>
+    </div>
+  </div>
   
-</body>
+
+
+  </body>
+</html>

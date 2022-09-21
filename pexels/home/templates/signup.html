@@ -1,85 +1,111 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css/style.css" type="text/css">
-    <script src="https://kit.fontawesome.com/3d4ecc8796.js" crossorigin="anonymous"></script>
-    
-    <title>Sign up</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css" type="text/css">
+  <script src="https://kit.fontawesome.com/3d4ecc8796.js" crossorigin="anonymous"></script>
 
-    <style>
+  <title>Sign up</title>
 
-      </style>
-      <title>Hello, world!</title>
-    </head>
-    <body class="bg-nav">
-        <div class="bg-nav text-light d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-            <header class="loghead"style="height: 8vh;">   
-              <nav>
-                  <div class="logo">
-                      <img src="static/img/logo.jpeg" alt="" class="nav_logo" >
-                          </div>
-                    <i onclick="openNav()" class="fas fa-bars fa-2x"></i>
-                </nav>
+  <style>
 
-            <div id="side-nav">
-              <i onclick="closeNav()" class="fas fa-times fa-2x" ></i>
-              <a href="">Home</a>
-              <a href="">Explore</a>
-              <a href="javascript:viod(0)">Contact Us</a>
-              <a href="javascript:viod(0)">About Us</a>
-              <a href="javascript:viod(0)">Sign up</a>
-              <a href="javascript:viod(0)">Sign in</a>
-          </div>
+  </style>
+  <title>Hello, world!</title>
+</head>
 
-        </header>
-            
-          </div>
+<body class="bg-nav">
 
-        <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <h1 class="text-light display-4 mt-100" style="font-size:50px" >The internet's source of freely usable images</h1>
-          </div>
-          <div class="col-md-4">
-            <div class="card mt-100">
-              <div class="card-body">
-                <form class="form" method="post" action="/login_validation">
-                    <form class="form" method="post" action="/adduser">
-                        <label>Name</label><br>
-                      <input type="text" class="form-control" name="ename" required><br>
-                      <label>Email</label><br>
-                      <input type="email" class="form-control" name="eemail" required><br>
-                      <lable>Password</lable><br>
-                      <input type="password" class="form-control" name="epassword" required><br>
-                      <lable>Confiem Password</lable><br>
-                      <input type="rpassword" class="form-control" name="erpassword" required><br><br>
-                      <input type="Submit" class="btn btn-primary btn-block btn-lg" value="Create Account">
-                    </form>
-                    <p class="mt-2">Already have a account? <a class="l" href="">Login Here</a></p>
-                
-              </div>
-            </div>
+  {% for message in messages %}
+  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Message:</strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endfor %}
+
+  <div
+    class="bg-nav text-light d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <header class="loghead" style="height: 8vh;">
+      <nav>
+        <div class="logo">
+          <img src="static/img/logo.jpeg" alt="" class="nav_logo">
+        </div>
+        <i onclick="openNav()" class="fas fa-bars fa-2x"></i>
+      </nav>
+
+      <div id="side-nav">
+        <i onclick="closeNav()" class="fas fa-times fa-2x"></i>
+        <a href="">Home</a>
+        <a href="">Explore</a>
+        <a href="javascript:viod(0)">Contact Us</a>
+        <a href="javascript:viod(0)">About Us</a>
+        <a href="javascript:viod(0)">Sign up</a>
+        <a href="javascript:viod(0)">Sign in</a>
+      </div>
+
+    </header>
+
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="text-light display-4 mt-100" style="font-size:50px">The internet's source of freely usable images
+        </h1>
+      </div>
+      <div class="col-md-4">
+        <div class="card mt-100">
+          <div class="card-body">
+              <form class="form" method="post" action="/signup">
+                {% csrf_token %}
+                <label>Username</label><br>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Create A Username (use only letters and numbers)" Required><br>
+                <label>First Name</label><br>
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name" Required><br>
+                <label>Last Name</label><br>
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name" Required><br>                
+                <label>Email</label><br>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email Address" Required><br>
+                <lable>Password</lable><br>
+                <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Create Your Password" Required><br>
+                <lable>Confiem Password</lable><br>
+                <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirm Your Password" Required><br><br>
+                <input type="Submit" class="btn btn-primary btn-block btn-lg" value="Create Account">
+              </form>
+              <p class="mt-2">Already have a account? <a class="l" href="/signin">Login Here</a></p>
+
           </div>
         </div>
       </div>
-       
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-      <script>
-        const sideNav = document.getElementById('side-nav');
+    </div>
+  </div>
 
-        function openNav() {
-            sideNav.style.width = '250px';
-        }
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <script>
+    const sideNav = document.getElementById('side-nav');
 
-        function closeNav() {
-            sideNav.style.width = '0';
-        }
-    </script>
-    </body>
-  </html>
+    function openNav() {
+      sideNav.style.width = '250px';
+    }
+
+    function closeNav() {
+      sideNav.style.width = '0';
+    }
+  </script>
+</body>
+
+</html>

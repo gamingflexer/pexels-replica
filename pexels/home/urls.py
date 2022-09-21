@@ -7,8 +7,9 @@ from .views import homePage
   
 urlpatterns = [
     path('', views.homePage, name='home'),
-    path('login', views.login, name='login'),
+    path('signin', views.signin, name='signin'),
     path('signup', views.signup, name='signup'),
     path('feedback', views.feedback, name='feedback'),
     path('explore', views.explore, name='explore'),
+    path('signout', views.signout, name='signout'),
 ]
