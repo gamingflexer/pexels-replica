@@ -42,6 +42,10 @@ def feedback(request):
 
     return render(request, "feedback.html")
 
+def aboutus(request):
+
+    return render(request, "aboutus.html")
+
 def signup(request):
     if request.method == "POST":
         username = request.POST['username']

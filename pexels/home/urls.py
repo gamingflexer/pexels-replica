@@ -12,4 +12,5 @@ urlpatterns = [
     path('feedback', views.feedback, name='feedback'),
     path('explore', views.explore, name='explore'),
     path('signout', views.signout, name='signout'),
+    path('aboutus', views.aboutus, name='aboutus'),
 ]
