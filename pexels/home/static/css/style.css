@@ -168,7 +168,7 @@ header .search i {
 .row .column .img-wrapper .overlay .user h5 {
   margin: 0 10px;
 }
-.row .column .img-wrapper .overlay .icon {
+/* .row .column .img-wrapper .overlay .icon {
   background-color: #fff;
   width: 40px;
   height: 40px;
@@ -177,7 +177,7 @@ header .search i {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
+} */
 .row .column .img-wrapper .overlay .icon:hover i {
   color: #e49c00;
 }
