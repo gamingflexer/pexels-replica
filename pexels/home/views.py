@@ -12,6 +12,7 @@ from django.contrib.auth import authenticate, login, logout
 from . tokens import generate_token
 from django.http import HttpResponse
 from pyunsplash import PyUnsplash
+import requests
 
 # Create your views here.
 
@@ -23,14 +24,18 @@ def homePage(request):
 
 def explore(request):
     try:
-        search = (request.GET['search'])
-    except KeyError:
-        search = "nature"
-    data = []
-    search = pu.search(type_='photos', query=search)
-    for photo in search.entries:
-        data.append(photo.link_download)
-    return render(request, 'explore.html', {'data': data}) 
+        try:
+            search = (request.GET['search'])
+        except KeyError:
+            search = "nature"
+        data = []
+        search = pu.search(type_='photos', query=search)
+        for photo in search.entries:
+            data.append(photo.link_download)
+        return render(request, 'explore.html', {'data': data}) 
+    except requests.exceptions.ConnectionError:
+        return render(request, 'explore.html', {'data': "No Internet Connection!!"})
+        
 
 
 def feedback(request):
