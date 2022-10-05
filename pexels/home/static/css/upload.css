@@ -1,182 +1,233 @@
-* {
+@import url("https://tonts. goog-capis:com/055family=Poppins:400,700| Open+Sans: 400") ;
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: "Inter", sans-serif;
-  }
-  .formbold-mb-5 {
-    margin-bottom: 20px;
-  }
-  .formbold-pt-3 {
-    padding-top: 12px;
-  }
-  .formbold-main-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 48px;
-  }
+}
 
-  .formbold-form-wrapper {
-    margin: 0 auto;
-    max-width: 550px;
-    width: 100%;
-    background: white;
-  }
-  .formbold-form-label {
-    display: block;
-    font-weight: 500;
-    font-size: 16px;
-    color: #07074d;
-    margin-bottom: 12px;
-  }
-  .formbold-form-label-2 {
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .formbold-form-input {
-    width: 100%;
-    padding: 12px 24px;
-    border-radius: 6px;
-    border: 1px solid #e0e0e0;
-    background: white;
-    font-weight: 500;
-    font-size: 16px;
-    color: #6b7280;
-    outline: none;
-    resize: none;
-  }
-  .formbold-form-input:focus {
-    border-color: #6a64f1;
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-  }
-
-  .formbold-btn {
-    text-align: center;
-    font-size: 16px;
-    border-radius: 6px;
-    padding: 14px 32px;
-    border: none;
-    font-weight: 600;
-    background-color: #6a64f1;
-    color: white;
-    cursor: pointer;
-  }
-  .formbold-btn:hover {
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-  }
-
-  .formbold--mx-3 {
-    margin-left: -12px;
-    margin-right: -12px;
-  }
-  .formbold-px-3 {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-  .flex {
-    display: flex;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-  .w-full {
-    width: 100%;
-  }
-
-  .formbold-file-input input {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .formbold-file-input label {
-    position: relative;
-    border: 1px dashed #e0e0e0;
-    border-radius: 6px;
-    min-height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 48px;
-    text-align: center;
-  }
-  .formbold-drop-file {
-    display: block;
-    font-weight: 600;
-    color: #07074d;
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
-
-  .formbold-or {
-    font-weight: 500;
-    font-size: 16px;
-    color: #6b7280;
-    display: block;
-    margin-bottom: 8px;
-  }
-  .formbold-browse {
-    font-weight: 500;
-    font-size: 16px;
-    color: #07074d;
+html{
+    font-size: 62.6%;
     display: inline-block;
-    padding: 8px 28px;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-  }
+   
+}
+body{
+    /* background: rgb(27,101,152);
+    background: linear-gradient(90deg, rgba(27,101,152,1) 12%, rgba(11,164,204,1) 51%, rgba(18,173,213,1) 100%); */
+    background-color: #F1F1F1;
+    height: 94.5vh;
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    
+    
+    float: left;
+    position:relative; 
+    
+    width: 2rem;
+    background-color: white;
+    box-shadow: 0.1rem 0.2rem 0.8rem grey;
+     height: 100%;  
+    padding: 2rem;
+    
+    
+ }
+ ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #FFDB58;
+    text-align: center;
+}
+.setting1,.home ,.statistic,.candiate ,.account{
+     
+     width: 2.2rem;
+ }
+ .home{
+     margin-top: 2rem;
+ }
+ .setting1{
+     margin-top: 2rem;
+ }
+ .home ,.statistic,.candiate{
+     margin-left: -2.2rem;
+     width:7rem ;
 
-  .formbold-file-list {
-    border-radius: 6px;
-    background: #f5f7fb;
-    padding: 16px 32px;
-  }
+ }
+ .fa-microsoft{
+     font-size: 2rem;
+     color: black;
+    
+ }
+ .setting{
+    margin-top: 25rem;
+    width: 2.4rem;
+ }
+ .account{
+     width: 5.6rem;
+     margin-left: -2.1rem;
+     
+ }
+ .projectname{
+     position: relative;
+     margin-top: 2.5rem;
+     margin-left: 2rem;
+     width: 20%;
+     height: 2rem;
+     border-radius: 2rem;
+     padding: 0.6rem;
+     color: black;
+     font-weight: 1000;
+ }
+ .sub_wrapper{
+     /* display: inline-block;  */
+     
+     position: absolute; 
+     border: 2px solid black;
+     border-radius: 2rem;
+     padding: 2rem;
+      top: 50%;
+      left: calc(50% + 2rem) ;
+      transform: translate(-50%,-50%);  
+      text-align: center;
+      z-index: 2;
+      background-color: rgb(221, 213, 213);
+ }
+ i{
+     font-size: 7rem;
+ }
+ p{
+     font-size: 2rem;
+ }
+ .file-input{
+     border: 0.7rem solid black;
+     border-radius: 1rem;
+ }
+ .btn{
+     background-color: #0d59a1;
+     color: white;
+     padding: 0.8rem;
+     border: 0.3rem solid white;
+     border-radius: 0.5rem;
+     font-weight: 700;
+ }
+ .uploadbtn{
+    background-color: lightgreen;
+    color: white;
+    padding: 0.8rem;
+    border: 0.3rem solid lightgreen;
+    border-radius: 0.5rem;
+    font-weight: 700;
+ }
 
-  .formbold-file-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+ .cleanbtn{
+    
+    background-color: #0d59a1;
+    color: white;
+    padding: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 0.3rem solid lightgreen;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    
+ }
+ .cbutton{
+     padding: 0.5rem;
+ }
+ .style1{
+     display: inline-block;
+    position: absolute; 
+     top: 50%;
+    left: calc(50% + 2rem); 
+    /* width: 100%;
+    height: 100vh;  */
+     transform: translate(-50%,-50%); 
+    z-index: 100;
+   background-color: #0d59a1;
+   background-size: cover; 
+    
   }
-
-  .formbold-file-item button {
-    color: #07074d;
-    border: none;
-    background: transparent;
-    cursor: pointer;
+  #loadingimg{
+      padding: 25rem;
   }
-
-  .formbold-file-name {
-    font-weight: 500;
-    font-size: 16px;
-    color: #07074d;
-    padding-right: 12px;
+  #error{
+      padding-top: 1rem;
+      font-size: 1.4rem;
+      word-wrap: break-word;
+      color: red;
   }
-  .formbold-progress-bar {
-    margin-top: 20px;
+.backgroundcube{
+    display: flex; 
+    background-color: white;
+    height: 100vh;
+}
+ 
+.cube {
+    margin: auto;
+    font-size: 24px;
+    height: 1em;
+    width: 1em;
     position: relative;
-    width: 100%;
-    height: 6px;
-    border-radius: 8px;
-    background: #e2e5ef;
-  }
+    transform-style: preserve-3d;
+    animation: cube-spin 1.5s infinite ease-in-out alternate both;
 
-  .formbold-progress {
+    z-index: 1000;
+}
+.side {
     position: absolute;
-    width: 75%;
-    height: 100%;
-    left: 0;
     top: 0;
-    background: #6a64f1;
-    border-radius: 8px;
-  }
-
-  @media (min-width: 540px) {
-    .sm\:w-half {
-      width: 50%;
-    }
-  }
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-style: preserve-3d;
+}
+.side::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: currentcolor;
+    transform: translatez(0.5em);
+    animation: cube-explode 1.5s infinite ease-in-out;
+    opacity: 0.5;
+}
+.side:nth-child(1) {
+    transform: rotatey(90deg);
+}
+.side:nth-child(2) {
+    transform: rotatey(180deg);
+}
+.side:nth-child(3) {
+    transform: rotatey(270deg);
+}
+.side:nth-child(4) {
+    transform: rotatey(360deg);
+}
+.side:nth-child(5) {
+    transform: rotatex(90deg);
+}
+.side:nth-child(6) {
+    transform: rotatex(270deg);
+}
+@keyframes cube-spin {
+    0% {
+        transform: rotatex(35.264deg) rotatey(45deg);
+   }
+    100% {
+        transform: rotatex(35.264deg) rotatey(405deg);
+   }
+}
+@keyframes cube-explode {
+    0% {
+        transform: translatez(0.5em);
+   }
+    50% {
+        transform: translatez(0.75em);
+   }
+    100% {
+        transform: translatez(0.5em);
+   }
+}

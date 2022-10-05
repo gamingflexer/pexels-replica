@@ -1,97 +1,133 @@
-<html lang="en">
+<!DOCTYPE html>
 
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="static/css/upload.css" type="text/css">
-
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/2360843bb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
+<body>
+  <div id="cubebody">
+    <div id="loadcube" >
+    
+      <div id="side1">
 
-<div class="formbold-main-wrapper">
-    <!-- Author: FormBold Team -->
-    <!-- Learn More: https://formbold.com -->
-    <div class="formbold-form-wrapper">
-      <form action="https://formbold.com/s/FORM_ID" method="POST">
-  
-        <div class="mb-6 pt-4">
-          <label class="formbold-form-label formbold-form-label-2">
-            Upload File
-          </label>
-  
-          <div class="formbold-mb-5 formbold-file-input">
-            <input type="file" name="file" id="file" />
-            <label for="file">
-              <div>
-                <span class="formbold-drop-file"> Drop files here </span>
-                <span class="formbold-or"> Or </span>
-                <span class="formbold-browse"> Browse </span>
-              </div>
-            </label>
-          </div>
-  
-          <div class="formbold-file-list formbold-mb-5">
-            <div class="formbold-file-item">
-              <span class="formbold-file-name"> banner-design.png </span>
-              <button>
-                <svg
-                  width="10"
-                  height="10"
-                  viewBox="0 0 10 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M0.279337 0.279338C0.651787 -0.0931121 1.25565 -0.0931121 1.6281 0.279338L9.72066 8.3719C10.0931 8.74435 10.0931 9.34821 9.72066 9.72066C9.34821 10.0931 8.74435 10.0931 8.3719 9.72066L0.279337 1.6281C-0.0931125 1.25565 -0.0931125 0.651788 0.279337 0.279338Z"
-                    fill="currentColor"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M0.279337 9.72066C-0.0931125 9.34821 -0.0931125 8.74435 0.279337 8.3719L8.3719 0.279338C8.74435 -0.0931127 9.34821 -0.0931123 9.72066 0.279338C10.0931 0.651787 10.0931 1.25565 9.72066 1.6281L1.6281 9.72066C1.25565 10.0931 0.651787 10.0931 0.279337 9.72066Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-  
-          <div class="formbold-file-list formbold-mb-5">
-            <div class="formbold-file-item">
-              <span class="formbold-file-name"> banner-design.png </span>
-              <button>
-                <svg
-                  width="10"
-                  height="10"
-                  viewBox="0 0 10 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M0.279337 0.279338C0.651787 -0.0931121 1.25565 -0.0931121 1.6281 0.279338L9.72066 8.3719C10.0931 8.74435 10.0931 9.34821 9.72066 9.72066C9.34821 10.0931 8.74435 10.0931 8.3719 9.72066L0.279337 1.6281C-0.0931125 1.25565 -0.0931125 0.651788 0.279337 0.279338Z"
-                    fill="currentColor"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M0.279337 9.72066C-0.0931125 9.34821 -0.0931125 8.74435 0.279337 8.3719L8.3719 0.279338C8.74435 -0.0931127 9.34821 -0.0931123 9.72066 0.279338C10.0931 0.651787 10.0931 1.25565 9.72066 1.6281L1.6281 9.72066C1.25565 10.0931 0.651787 10.0931 0.279337 9.72066Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div class="formbold-progress-bar">
-              <div class="formbold-progress"></div>
-            </div>
-          </div>
-        </div>
-  
-        <div>
-          <button class="formbold-btn w-full">Send File</button>
-        </div>
-      </form>
-    </div>
+      </div>
+      <div id="side2">
+
+      </div>
+      <div id="side3">
+
+      </div>
+      <div id="side4">
+
+      </div>
+      <div id="side5">
+
+      </div>
+      <div id="side6">
+
+      </div>
+  </div>  
+</div>
+    
+</div>
+  <div id="sub_upload" class="wrapper">
+    <!-- <header>File Uploader</header> -->
+    <form action="/upload"  method="post" enctype="multipart/form-data"  >
+      <div  class="sub_wrapper">
+        <input class="file-input" type="file" name="files[]" id="fileInput" class="form-control" multiple aria-hidden="false"required >
+        <br>
+        <i class="fas fa-cloud-upload-alt"></i>
+        <p>Browse File to Upload</p>
+        <br>
+        <input type="submit" name="submit" class="btn" value="Upload" id="upbtn" onclick="loader()"/>
+        <br>
+    </form>
+    
   </div>
+  
+ <script>
+   const fileSelector = document.getElementById('fileInput');
+   let fileListLength=0;
+    let value=0
+   if(fileListLength==0 || value==1)
+  {
+    document.getElementById("upbtn").disabled = true;
+   
+
+  }
+  fileSelector.addEventListener('change', (event) => {
+    fileListLength=0;
+     value=0
+    const fileList = event.target.files;
+
+    console.log(fileList.length);
+    let allowedextension=['txt', 'pdf', 'png', 'jpg','jpeg', 'docx', 'doc', 'rtf', 'odt', 'html', 'txt', 'zip','rar'];
+    console.log(allowedextension);                     
+    console.log(fileList[0]['name'].lastIndexOf('.',))
+    let indexno=fileList[0]['name'].lastIndexOf('.',)
+    console.log(fileList[0]['name'].slice(indexno+1,))
+    fileListLength=fileList.length
+    for(let i=0;i<fileList.length;i++)
+    {
+      let indexno=fileList[i]['name'].lastIndexOf('.',)
+      let extension=fileList[i]['name'].slice(indexno+1,)
+      if(allowedextension.includes(extension)){
+        console.log(allowedextension.includes(extension))
+
+
+
+      }
+      else{
+        const data=document.getElementById('error');
+        data.innerHTML='Invalid extension we accept only txt, pdf, png, jpg, jpeg, docx, doc, rtf, odt, html, txt, zip';
+        value=1;
+        console.log(allowedextension.includes(extension))
+
+        break;
+      }
+      
+      
+
+
+    }
+    console.log(fileListLength ,value)
+      if(fileListLength!=0 && value!=1){
+        document.getElementById("upbtn").disabled = false;
+        document.getElementById('upbtn').setAttribute("class","uploadbtn");
+
+      }
+      else if(fileListLength==0 || value==1)
+      {
+    document.getElementById("upbtn").disabled = true;
+   
+
+  }
+
+  });
+  
+   
+   
+  function loader(){
+    document.getElementById('cubebody').setAttribute("class","backgroundcube");
+    document.getElementById('loadcube').setAttribute("class","cube");
+    document.getElementById('side1').setAttribute("class","side");
+    document.getElementById('side2').setAttribute("class","side");
+    document.getElementById('side3').setAttribute("class","side");
+    document.getElementById('side4').setAttribute("class","side");
+    document.getElementById('side5').setAttribute("class","side");
+    document.getElementById('side6').setAttribute("class","side");
+    document.getElementById('sub_upload').setAttribute("visibility","hidden");
+    document.getElementById('sub_upload').style.display="none";
+    document.getElementById('sidebar').style.display="none";
+
+
+  }
+</script> 
+</body>
+</html>

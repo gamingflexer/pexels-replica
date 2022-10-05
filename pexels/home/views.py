@@ -11,7 +11,7 @@ from pyunsplash import PyUnsplash
 from .serializers import FileSerializer
 from rest_framework.views import APIView
 import requests
-from keys import unsplash_key
+from home.keys import unsplash_key
 
 
 
@@ -36,8 +36,6 @@ def explore(request):
     except requests.exceptions.ConnectionError:
         return render(request, 'explore.html', {'data': "No Internet Connection!!"})
         
-
-
 def feedback(request):
 
     return render(request, "feedback.html")
@@ -45,6 +43,9 @@ def feedback(request):
 def aboutus(request):
 
     return render(request, "aboutus.html")
+
+def upload(request):
+    return render(request, "upload.html")
 
 def signup(request):
     if request.method == "POST":
