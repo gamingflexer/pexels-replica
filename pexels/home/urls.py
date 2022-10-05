@@ -12,5 +12,5 @@ urlpatterns = [
     path('signout', views.signout, name='signout'),
     path('aboutus', views.aboutus, name='aboutus'),
     path('upload', views.upload, name='upload'),
-    path('/api/upload',FileView.as_view(), name='FileView'),  
+    path('api/upload',FileView.as_view(), name='FileView'),  
 ]
