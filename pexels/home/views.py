@@ -1,23 +1,23 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.core.mail import EmailMessage, send_mail
-from pexels import settings
-from django.contrib.sites.shortcuts import get_current_site
-from django.template.loader import render_to_string
-from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
-from django.utils.encoding import force_bytes, force_text
+from rest_framework.parsers import MultiPartParser, FormParser
 from django.contrib.auth import authenticate, login, logout
-from . tokens import generate_token
+from rest_framework.response import Response
+from rest_framework import status
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from pyunsplash import PyUnsplash
+from .serializers import FileSerializer
+from rest_framework.views import APIView
 import requests
+from keys import unsplash_key
+
+
 
 # Create your views here.
 
-YOUR_KEY = "7dfHhkHblHq8JtO2x0u5pHaEDiY2u1yTiUAD2IUcnjo"
-pu = PyUnsplash(api_key=YOUR_KEY)
+pu = PyUnsplash(api_key=unsplash_key)
 
 def homePage(request):
     return render(request, "home.html")
@@ -108,3 +108,16 @@ def signout(request):
     logout(request)
     messages.success(request, "Logged Out Successfully!!")
     return redirect('home')
+
+
+class FileView(APIView):  # for getting REPORT upload
+    parser_classes = (MultiPartParser, FormParser)
+
+    @csrf_exempt
+    def post(self, request, *args, **kwargs):
+        file_serializer = FileSerializer(data=request.data)
+        if file_serializer.is_valid():
+            file_serializer.save()
+            pathOfFile = file_serializer.data['file']
+        else:
+            return Response(file_serializer.errors['file'], status=status.HTTP_400_BAD_REQUEST)

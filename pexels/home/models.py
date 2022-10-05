@@ -5,3 +5,7 @@ from django.contrib.auth.models import User
 class Customer(models.Model):
  username = models.ForeignKey(User, on_delete=models.CASCADE)
  password = models.CharField(max_length=200)
+
+class File(models.Model):
+  file = models.FileField(blank=False, null=False)
+  timestamp = models.DateTimeField(auto_now_add=True)
