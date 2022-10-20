@@ -13,4 +13,5 @@ urlpatterns = [
     path('aboutus', views.aboutus, name='aboutus'),
     path('upload', views.upload, name='upload'),
     path('api/upload',FileView.as_view(), name='FileView'),  
+    path('feedback2', views.feedback2, name ='index'),
 ]
