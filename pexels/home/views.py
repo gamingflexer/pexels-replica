@@ -19,6 +19,9 @@ from home.forms import PostForm
 
 pu = PyUnsplash(api_key=unsplash_key)
 
+def temp(request):
+    return render(request, "home.html")
+
 def homePage(request):
     return render(request, "home.html")
 
