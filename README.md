@@ -26,6 +26,6 @@ Use the following command to run the application. Run migrations before running 
 
 # Screenshots
 
-![Screenshot (1)]()
-![Screenshot (2)]()
-![Screenshot (3)]()
+![](resources/home_page.png)
+![](resources/signing_page.png)
+![](resources/search_page.png)
