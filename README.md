@@ -10,7 +10,7 @@ Make a keys.py file and add your API key in `pexels/home` as follows :
 
 `unsplash_key = 'Values'`
 
-get your API key from [Unsplash](https://unsplash.com/developers)
+Get your API key from [Unsplash](https://unsplash.com/developers)
 
 # Usage
 
@@ -18,11 +18,16 @@ Use the following command to run the application. Run migrations before running 
 
 ```cd pexels```
 
-```python manage.py makemigrations``` to make migrations
+To make migrations & migrate
 
-```python manage.py migrate``` to migrate
+```
+python manage.py makemigrations
+python manage.py migrate
+```
 
-```python manage.py runserver``` to run the server
+To run the server
+
+```python manage.py runserver``` 
 
 # Screenshots
 
